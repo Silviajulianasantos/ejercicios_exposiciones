@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script language = "Javascript">
+            var reloj = 0;
+            var frecuencia = 1000;
+            function actualizada()
+            {
+                var ahora = new Date ();
+                var fecha =  ahora.getDate() + " _" +(ahora.getMonth() + 1) + " _ " + ahora.getFullYear();
+                var hora = ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds();
+                var escribe = 'Hoy es ' + fecha + 'y son las' + hora + 'horas';
+                var situa = document.getElementById('capa0');
+                situa.innerHTML = escribe;
+                reloj = setTimeout("Actualiza ()", frecuencia);
+            }
+
+        </script>
+        <title>Cronometro</title>
+    </head>
+    <body onload="actualizada()" ;>
+        <div id= "capa0"></div>
+    </body>
+</html>
